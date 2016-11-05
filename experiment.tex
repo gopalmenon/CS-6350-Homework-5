@@ -1,0 +1,122 @@
+\section{Experiments}
+\label{sec:q3}
+
+In this question, you will implement the support vector machine (SVM)
+and a variant of random forest which combine SVMs and decision trees.
+
+We will use two datasets for this question:
+\begin{enumerate}
+\item {\tt semelion handwritten digits data}: This dataset contains
+  1593 handwritten digits from around 80 persons were scanned,
+  stretched in a rectangular box 16x16 in a gray scale of 256 values.
+  Our goal is implement svm in this data set to determine whether is a
+  number 6.
+\item {\tt madelon}: This is one of five datasets used in the NIPS
+  2003 feature selection challenge. There are 2000 examples in
+  training set and 600 examples in test set. 
+\end{enumerate}
+
+You may reuse your code in decision tree. If \textbf{you have problems
+  in decision tree}, please contact with TA to get help. You may use
+Java, Python, Matlab, C/C++ for this assignment. If you want to use a
+different language, you must contact the instructor first. Any other
+language you may want to use \textbf{MUST} run on the CADE machines.
+
+\subsection{Support Vector Machines}
+\begin{enumerate}
+\item ~[6 points] Implement the stochastic gradient descent algorithm
+  for SVMs. Run it on the {\tt handwriting} dataset with
+  hyperparameter $C=1$ and $\rho_0 = 0.01$. Report the accuracy in
+  test set and training set.
+\item ~[8 points] Run your SVM code on the {\tt madelon} dataset and
+  use 5-fold cross-validation to choose suitable parameters. At least
+  attempt 6 different values for $C$ and 3 different values for
+  $\rho$. Report the average accuracy for each group of parameters.
+  Report the accuracy in your test set as well as training set.
+
+  Hint: You should try out $C$ in exponential steps, for example,
+  $2^1, 2^{-1}, 2^{-2}, \cdots$.
+
+\item ~[6 points] Precision , recall and $ F_1$ score are another
+  metrics besides accuracy, which are useful if the dataset is
+  unbalanced with respect to the positive and negative examples. To
+  compute these quantities, you should count the number of true
+  positives (that is, examples that your classifier predicts as
+  positive and are truly positive), the false positives (i.e, examples
+  that your classifier predicts as positive, but are actually labeled
+  negative) and the false negatives (i.e., examples that are predicted
+  as negative by your classifier, but are actually positive).
+  
+  Denote true positives, false positive and false negative as TP, FP
+  and FN respectively. The precision ($p$), recall ($r$) and f-value
+  $F_1$ are defined as:
+  \begin{eqnarray*}
+    p   & = & \frac{TP}{TP + FP} \\
+    r   & = & \frac{TP}{TP+FN}   \\
+    F_1 & = & 2 \frac{p \cdot r}{p + r} 
+  \end{eqnarray*}
+
+  Give precision, recall and $F_1$ score for your classifiers
+  constructed in the previous two questions.
+\end{enumerate}
+
+\subsection{Ensemble of decision trees}
+
+Recall that a random forest is an ensemble based on bagging and
+decision tree. For bagging, we draw $m$ samples {\em with replacement}
+from the training set. According to
+$$\lim_{m \to \infty}(1-\frac{1}{m})^m \to \frac{1}{e} \simeq 0.368$$
+there are about $63.2 $ percent items may not appear that set. In
+random forest, we use this sampling method $N$ times, to construct $N$
+training sets and grow $N$ decision trees. Note that we build unpruned
+decision trees.
+
+In each node, instead of using the best feature by ID3 , we choose $k$
+features randomly and than use the ID3 heuristic to find the best
+feature to split on. Generally, $k = log_2 d $is a good choice where d
+is the number of features for our data.
+
+Since there are $N$ trees, there will be $N$ predictions for each
+example. Generally, the final prediction is voted on by these trees.
+However, we would like to use SVM to combine these predictions for
+this question. Specifically, after growing the $N$ decision trees, you
+should construct a new $D$ consisting of transformed features. The
+feature transformation $\phi(x)$ is defined using the $N$ trees as
+follows:
+
+$$\phi(x) = [tree_1(x), tree_2(x), \cdots, tree_{N} (x)]$$  
+
+In other words, you will build an $N$ dimensional vector consisting of
+the prediction (1 or -1) of each tree that you created. Thus, you have
+a {\em learned} feature transformation.
+
+You will finally train an SVM on this new dataset $D$.
+
+\begin{enumerate}
+\item ~[15 points] Using the method mentioned above, construct
+  $N = 5$ decision trees for the {\tt handwriting} dataset. For each
+  node, select $k = log_2 d = 8$ features randomly and then use the
+  ID3 heuristic to find the best feature for splitting.
+
+  Train the SVM meta-classifier and report the accuracy for both
+  training set and test set. (No cross-validation is needed but
+  please choose good parameters for SVM, we will take out points for
+  very low accuracy.)
+
+\item ~[25 points] Implement same method on the {\tt madelon}
+  dataset. ($k = log_2 d = 11$)
+  \begin{enumerate}
+  \item ~[20 points] Try $N = 10, 30, 100$. For each $N$, report
+    accuracy on training set and test set. (No cross-validation is
+    needed, but please choose good parameters for the SVM. )
+
+  \item ~[5 points] Choose the best $N$ among those you have tried
+    (you may try some new numbers). Report the accuracy, precision,
+    recall and $f_1$ score on test set.
+  \end{enumerate}
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "hw"
+%%% End:

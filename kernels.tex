@@ -1,0 +1,51 @@
+\section{Kernels}
+\label{sec:q2}
+
+\begin{enumerate}  
+
+
+\item  ~[15 points] If $K_1(\bx,\bz)$ and $K_2(\bx,\bz)$ are both valid kernel
+  functions. In this question, you will prove that certain functions
+  of kernels are valid kernels. 
+
+  [Hint: For both the proofs below, use the the definition of a kernel
+  as a dot product in a high dimensional space.]
+
+\begin{enumerate}
+\item ~[5 points] Show that the product of two kernels is a kernel.
+  That is, show that $K$ in the expression below is a kernel:
+  \begin{equation*}
+    K(\bx,\bz) = K_1(\bx,\bz) K_2(\bx,\bz)
+  \end{equation*} 
+
+\item ~[10 points] Show that a polynomial over a kernel that is
+  constructed using positive coefficients is a kernel. That is, if $P$
+  is any polynomial with positive coefficients, show that $K$ below is
+  a kernel:
+  \begin{equation*}
+    K(\bx,\bz) =P( K_1(\bx,\bz))
+  \end{equation*} 
+Hint: You may need show  $ K(\bx,\bz) = \alpha K_1(\bx,\bz) +  \beta K_2(\bx,\bz)$ is a valid kernel and use the conclusion in the previous question.
+\end{enumerate} 
+  
+
+\item~[10 points] Given two examples $\bx \in \Re^2$ and $\bz \in
+  \Re^2$, let
+  \begin{equation}
+    K(\bx,\bz) = 15\left(\bx^T\bz\right)^2 \exp\left(-||\bx - \bz||^2\right)
+  \end{equation}
+  Prove that this is a valid kernel function.
+  
+ \item ~(\textbf{For 6350 students})[10 points]An valid kernel can always be  expressed as inner product. Prove that the Gaussian  kernel
+
+$$K(\bx, \bz) = \exp(\frac{-\| x -z\|^2}{2 \sigma^2})$$
+ can be written down as the inner product of an feature space with infinite dimension. Hint:  You may do some expansion and  then show the middle factor can be expanded as a power series.
+ 
+
+
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "hw"
+%%% End:

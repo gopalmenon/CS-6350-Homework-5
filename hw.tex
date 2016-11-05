@@ -1,0 +1,44 @@
+\documentclass[12pt, fullpage,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{url}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage{caption}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+\newcommand{\semester}{Fall 2016}
+\newcommand{\assignmentId}{5}
+\newcommand{\releaseDate}{Nov 2, 2016}
+\newcommand{\dueDate}{Nov 15, 2016}
+
+\newcommand{\bx}{{\bf x}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bz}{{\bf z}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\title{CS 5350/6350: Machine Learining \semester}
+\author{Gopal Menon\\Homework \assignmentId}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{margins}
+
+\input{kernels}
+
+\input{experiment}
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
