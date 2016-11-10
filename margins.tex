@@ -80,8 +80,8 @@ The input features $x_1$ and $x_2$ in the original feature space are shown in fi
       \hline
       Point & coordinate  & label & Point & coordinate  & label \\
       \hline
-      $x_1$ & (0, 0)             & + & $x_5$ & (0, 1)                                & - \\
-      $x_2$ & (1, 0)             & + & $x_6$ & ($\frac{1}{2}$, $\frac{\sqrt{3}}{2}$) & - \\
+      $x_1$ & (0, 0)             & + & $x_5$ & (1, 0)                                & - \\
+      $x_2$ & (0, 1)             & + & $x_6$ & ($\frac{1}{2}$, $\frac{\sqrt{3}}{2}$) & - \\
       $x_3$ & (1, 1)             & + & $x_7$ & ($\frac{3}{2}$, 0)                    & - \\
       $x_4$ & ($\frac{1}{2}$, 0) & + & $x_8$ & (1, $\frac{1}{2}$)                    & - \\
       \hline
@@ -91,7 +91,7 @@ The input features $x_1$ and $x_2$ in the original feature space are shown in fi
 
   Suppose we have three training sets comprising of subsets of these
   points. We have
-  $$D_1 = \{x_1, x_2, x_3, x_4, x_7\}$$
+  $$D_1 = \{x_1, x_2, x_3, x_5, x_7\}$$
   $$D_2 = \{x_1, x_5, x_6, x_8\}$$
   $$D_3 = \{x_3, x_4, x_5, x_ 7\}$$
 
@@ -102,56 +102,53 @@ The input features $x_1$ and $x_2$ in the original feature space are shown in fi
    \begin{figure}[H]
     \centering
     \begin{tikzpicture}[domain=0:2]
-      \draw[<->] (0,0) -- (7,0);
-      \draw[<->] (0,0) -- (0,4.5);
-      \draw [<->] (4,-1) -- (4,4.5) ;
-      \draw [<->] (6,-1) -- (6,4.5) ;
-      \draw [<->] [ultra thick](5,-1) -- (5,4.5) ;
-      \foreach \Point/\PointLabel in {(0,0)/, (4,0)/, (4,4)/, (2,0)/, (6,0)/}
+      \draw[<->] (-2,0) -- (10,0);
+      \draw[<->] (0, -2) -- (0,6);
+      \draw [<->] (-1,-1) -- (5, 5) ;
+      \draw [<->] (3,-1) -- (9, 5) ;
+      \draw [<->] [ultra thick](1,-1) -- (7, 5) ;
+      \foreach \Point/\PointLabel in {(0,0)/, (0,4)/, (4,4)/, (4,0)/, (6,0)/}
 \draw[fill=black] \Point circle (0.05) node[above right] {$\PointLabel$};
-\node [above] at (0,0) {$(0,0)+$};
-\node [below] at (0,0) {$x_1$};
-\node [above] at (4, 0) {$(1, 0)+$};
-\node [below] at (4, 0) {$x_2$};
+\node [above left] at (0,0) {$(0,0)+$};
+\node [below right] at (0,0) {$x_1$};
+\node [left] at (0, 4) {$(0, 1)+$};
+\node [right] at (0, 4) {$x_2$};
 \node [left] at (4, 4) {$(1, 1)+$};
 \node [right] at (4, 4) {$x_3$};
-\node [above] at (2, 0) {$(\frac{1}{2}, 0)+$};
-\node [below] at (2, 0) {$x_4$};
+\node [above] at (4, 0) {$(1, 0)-$};
+\node [below] at (4, 0) {$x_5$};
 \node [above] at (6, 0) {$(\frac{3}{2}, 0)-$};
 \node [below] at (6, 0) {$x_7$};
     \end{tikzpicture}
     \caption{Points in set $D_1$.} \label{SetD1}
   \end{figure}   
 
-The maximum margin for $D_1$ is given is shown by the solid line in figure \ref{SetD1}. This bold line is in the middle of the widest strip separating the positive and negative labels. This widest strip is shown by the two lines through $x_2$, $x_3$ and through $x_7$. The margin is thus the distance between $x_2$ and $x_7$, which is $\frac{3}{2} -1 = \frac{1}{2} =0.5$.
+The line separating the positive and negative examples with the maximum margin for $D_1$ is given is shown by the bold line in figure \ref{SetD1}. This bold line is in the middle of the widest strip separating the positive and negative labels. This widest strip is shown by the two lines through $x_1$, $x_3$ and through $x_5$. The bold line intersects the horizontal axis at $(\frac{1}{2}, 0)$. All the separating lines are at $45 \si{\degree}$ to the horizontal axis since one separating line passes through $(0, 0)$ and $(1, 1)$ and the three separating lines are parallel. So the distance between the bold line and the line through $x_1$ is $\frac{1}{2} \cos(45\si{\degree}) =  \frac{1}{2} \frac{1}{\sqrt{2}} =  \frac{1}{2\sqrt{2}}$
 
    
    \begin{figure}[H]
     \centering
     \begin{tikzpicture}[domain=0:2]
-      \draw[<->] (-1,0) -- (10,0);
-      \draw[<->] (0,-5) -- (0,4.5);
-      \draw [<->] (-0.5,4.25) -- (9,-0.5) ;
-      \draw [<->] (-0.5,0.25) -- (9,-4.5) ;
-      \draw[] (0,0) -- (1.6,3.2);
-      \draw [<->] [ultra thick](-0.5,2.25) -- (9,-2.5) ;
-      \foreach \Point/\PointLabel in {(0,0)/, (0,4)/, (2,3.4641)/, (4,2)/}
+      \draw[<->] (-5,0) -- (10,0);
+      \draw[<->] (0,-1.5) -- (0,8);
+      \draw[<->] (-4.4,7.621024) -- (0.5773,-1);
+      \draw[<->] [ultra thick] (-2.4,7.621024) -- (2.5773,-1);
+      \draw[<->] (-0.4,7.621024) -- (4.5773,-1);
+      \foreach \Point/\PointLabel in {(0,0)/, (4,0)/, (2,3.4641)/, (4,2)/}
 \draw[fill=black] \Point circle (0.05) node[above right] {$\PointLabel$};
-\node [left] at (0,0) {$(0,0)+$};
-\node [below] at (0,0) {$x_1$};
-\node [left] at (0, 4) {$(0, 1)-$};
-\node [right] at (0, 4) {$x_5$};
-\node [above] at (2, 3.4641) {$(\frac{1}{2}, \frac{\sqrt{3}}{2})-$};
-\node [below] at (2, 3.4641) {$x_6$};
-\node [above] at (4, 2) {$(1, \frac{1}{2})-$};
+\node [above right] at (0,0) {$(0,0)+$};
+\node [below left] at (0,0) {$x_1$};
+\node [above right] at (4, 0) {$(1, 0)-$};
+\node [below left] at (4, 0) {$x_5$};
+\node [right] at (2, 3.4641) {$(\frac{1}{2}, \frac{\sqrt{3}}{2})-$};
+\node [left] at (2, 3.4641) {$x_6$};
+\node [right] at (4, 2) {$(1, \frac{1}{2})-$};
 \node [below] at (4, 2) {$x_8$};
     \end{tikzpicture}
     \caption{Points in set $D_2$.} \label{SetD2}
   \end{figure}  
 
-The widest strip separating the two labels in $D_2$ is shown in figure \ref{SetD2}, with the solid line marking the separating margin between the two labels. One side of the widest strip passes through $x_5$ and $x_8$. The slope of this line is $-\frac{1}{2}$ (computed using the formula $\frac{y_2 - y_1}{x_2 - x_1}$ for a line that passes through points $(x_1, y_1)$ and $(x_2, y_2)$). The equation of this line is $y-1=-\frac{1}{2}x$ or $x+2y=2$ (using the formula for the equation of a line that passes trough point $(x_1, y_1)$ and has a slope of $m$, which is $y-y_1 = m(x-x_1)$). The other side of the widest strip will pass through $x_1$ and will have the same slope of $-\frac{1}{2}$. So the equation of this side of the widest strip will be $x+2y=0$. The equation for the bold line separating the points with the two labels will be $x+2y=1$.
-
-To find the width of the widest strip, we can first find the equation of the line that is perpendicular to the widest strip (slope = $2$) and passing through $(0,0)$. The equation will be $y=2x$ or $2x-y=0$. This line is shown in figure \ref{SetD2}. One end of the line is $(0,0)$ and the other end is $(0.4,0.8)$. The margin is therefore the length of this line or $\sqrt{0.4^2 + 0.8^2} = \sqrt{0.8}=0.8944$.
+The widest strip separating the two labels in $D_2$ is shown in figure \ref{SetD2}, with the solid line marking the separating margin between the two labels. One side of the widest strip passes through $x_5$ and $x_6$ and the other is parallel and passes through $(0, 0)$. The slope of the separating lines is $\frac{\frac{\sqrt{3}}{2} - 0}{\frac{1}{2} -1} = -\sqrt{3}$ (the slope of the line joining $x_5$ and $x_6$). Based on the value of the slope, we can say that the lines make an angle of $120 \si{\degree}$ with the horizontal. Which means that $\sin(180 - 120) = \sin(60) = \frac{\sqrt{3}}{2} = \frac{margin}{0.5}$ since the distance between the horizontal intercepts of the bold line and the line through $x_6$ and $x_5$ is $0.5$. This means that $margin = \frac{\sqrt{3}}{4}$.
    
    \begin{figure}[H]
     \centering
