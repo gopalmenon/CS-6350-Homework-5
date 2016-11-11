@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 NOV 2016 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 NOV 2016 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1056,22 +1056,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count184
  (./margins.tex
+
+LaTeX Warning: Reference `XorSvm' on page 1 undefined on input line 29.
+
+
+LaTeX Warning: Reference `XorOriginal' on page 1 undefined on input line 31.
+
+
+LaTeX Warning: Reference `XorSvm' on page 1 undefined on input line 31.
+
+
+LaTeX Warning: Reference `XorOriginal' on page 1 undefined on input line 31.
+
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4]) (./kernels.tex) (./experiment.tex [5] [6]) [7] (./hw.aux)
+[2]
+
+LaTeX Warning: Reference `SetD1' on page 3 undefined on input line 126.
+
+[3]
+
+LaTeX Warning: Reference `SetD2' on page 4 undefined on input line 151.
+
+
+LaTeX Warning: Reference `SetD3' on page 4 undefined on input line 175.
+
+[4]) (./kernels.tex [5]) (./experiment.tex [6] [7]) [8] (./hw.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 32123 strings out of 493089
- 785702 string characters out of 6134842
- 860829 words of memory out of 5000000
- 35140 multiletter control sequences out of 15000+600000
+ 32134 strings out of 493089
+ 785905 string characters out of 6134842
+ 860765 words of memory out of 5000000
+ 35151 multiletter control sequences out of 15000+600000
  17313 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,77p,10369b,918s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,77p,10369b,921s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1085,10 +1111,10 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on hw.pdf (7 pages, 153478 bytes).
+Output written on hw.pdf (8 pages, 157215 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
