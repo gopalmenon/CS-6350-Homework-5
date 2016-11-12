@@ -81,13 +81,64 @@ Since $K_1(\bx, \bz)$ and $K_2(\bx, \bz)$ and other terms are kernels, and coeff
   \end{equation}
   Prove that this is a valid kernel function.
   
+According to Mercer's condition, for every finite set $\left \{ x_1, x_2, \ldots \right \}$, for any real valued choice of $c_1, c_2, \ldots$, the following needs to be true
+  
+  \begin{equation*}
+\begin{aligned}
+   \sum_i \sum_j c_i c_j 15\left(\bx_i^T\bz_j\right)^2 \exp\left(-||\bx_i - \bz_j||^2\right) &\geq 0\\
+\end{aligned}
+\end{equation*}
+
+We know that $\exp\left(-||\bx_i - \bz_j||^2\right)$ will always be positive. Let $\exp\left(-||\bx_i - \bz_j||^2\right) = k_{ij}$. So the inequality that must be true is
+
+  \begin{equation*}
+\begin{aligned}
+  15k_{ij} \sum_i \sum_j c_i c_j \left(\bx_i^T\bz_j\right)^2  &\geq 0
+\end{aligned}
+\end{equation*}
+  
+ If we define $\left(\bx_i^T\bz_j\right)^2$ as $(K(\bx_i, \bz_j))^2$, then we can represent kernel $(K(\bx_i, \bz_j))^2$ as another kernel $K'(\bx_i, \bz_j)$ since we have already shown that any power of a kernel is also a kernel. We now have to show that
+ 
+   \begin{equation*}
+\begin{aligned}
+  15k_{ij} \sum_i \sum_j c_i c_j K'(\bx_i, \bz_j)  &\geq 0
+\end{aligned}
+\end{equation*}
+ 
+ which is true by Mercer's condition since $K'(\bx_i, \bz_j)$ is a kernel.
+ 
  \item ~(\textbf{For 6350 students})[10 points]An valid kernel can always be  expressed as inner product. Prove that the Gaussian  kernel
 
 $$K(\bx, \bz) = \exp(\frac{-\| x -z\|^2}{2 \sigma^2})$$
  can be written down as the inner product of an feature space with infinite dimension. Hint:  You may do some expansion and  then show the middle factor can be expanded as a power series.
  
+   \begin{equation*}
+\begin{aligned}
+  K(\bx, \bz) &= \exp\left(\frac{-\| x -z\|^2}{2 \sigma^2}\right)\\
+  &= \exp\left(\frac{-x^2 + 2xz -z^2}{\sigma^2}\right)\\
+  &= \exp\left(\frac{-x^2}{\sigma^2}\right) \exp\left(\frac{2xz}{\sigma^2}\right) \exp\left(\frac{-z^2}{\sigma^2}\right)\\
+  &= \exp\left(\frac{-x^2}{\sigma^2}\right) \left(1+ \frac{\frac{2xz}{\sigma^2}}{1!}  + \frac{\left(\frac{2xz}{\sigma^2}\right)^2}{2!} + \frac{\left(\frac{2xz}{\sigma^2}\right)^3}{3!}+ \ldots \right) \exp\left(\frac{-z^2}{\sigma^2}\right)\\
+  &= \exp\left(\frac{-x^2}{\sigma^2}\right) \left(1+ \frac{1}{\sqrt{1!}}\frac{\sqrt{2}x}{\sigma } \frac{1}{\sqrt{1!}}\frac{\sqrt{2}z}{\sigma } +  \frac{1}{\sqrt{2!}}\left(\frac{\sqrt{2}x}{\sigma }\right)^2 \frac{1}{\sqrt{2!}}\left(\frac{\sqrt{2}z}{\sigma } \right)^2+  \ldots \right) \exp\left(\frac{-z^2}{\sigma^2}\right)\\
+\end{aligned}
+\end{equation*}
 
+This can be seen to be a product in a different dimension between
 
+   \begin{equation*}
+\begin{aligned}
+\phi(x) = \exp(-x^2) \left(1, \frac{\sqrt{2}x}{\sqrt{1!}\sigma}, \frac{\sqrt{2^2}x^2}{\sqrt{2!}\sigma^2} , \frac{\sqrt{2^3}x^3}{\sqrt{3!}\sigma^3} , \ldots\right)
+\end{aligned}
+\end{equation*}
+ 
+ and 
+ 
+   \begin{equation*}
+\begin{aligned}
+\phi(z) = \exp(-z^2) \left(1, \frac{\sqrt{2}z}{\sqrt{1!}\sigma}, \frac{\sqrt{2^2}z^2}{\sqrt{2!}\sigma^2} , \frac{\sqrt{2^3}z^3}{\sqrt{3!}\sigma^3} , \ldots\right)
+\end{aligned}
+\end{equation*}
+ 
+ Which means $K(\bx, \bz)$ can be written down as the inner product of a feature space with infinite dimension. 
 \end{enumerate}
 
 %%% Local Variables:
