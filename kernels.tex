@@ -18,6 +18,34 @@
     K(\bx,\bz) = K_1(\bx,\bz) K_2(\bx,\bz)
   \end{equation*} 
 
+Since $K_1$ and $K_2$ are kernels, according to Mercer's condition, for every finite set $\left \{ x_1, x_2, \ldots \right \}$, for any real valued choice of $c_1, c_2, \ldots$, we have
+
+  \begin{equation}
+   \sum_i \sum_j c_i c_j K_1 \left ( \bx_i, \bx_j \right ) \geq 0
+   \label{mercer1}
+  \end{equation} 
+
+  \begin{equation}
+   \sum_i \sum_j c_i c_j K_2 \left ( \bx_i, \bx_j \right ) \geq 0
+   \label{mercer2}
+  \end{equation} 
+  
+  For $K_1(\bx,\bz) K_2(\bx,\bz)$ to be a Kernel, the following needs to be true
+  
+  \begin{equation}
+   \sum_i \sum_j c_i c_j K_1 \left ( \bx_i, \bx_j \right ) K_2 \left ( \bx_i, \bx_j \right ) \geq 0
+   \label{mercer3}
+  \end{equation} 
+  
+  Let $c_j K_1 \left ( \bx_i, \bx_j \right ) =  k_j$. Since $c_j$ can take any real values, it follows that $k_j$ can take any real value. So we can now reduce the requirement of the inequality \ref{mercer3} to
+  
+    \begin{equation}
+   \sum_i \sum_j c_i k_j K_2 \left ( \bx_i, \bx_j \right ) \geq 0
+   \label{mercer4}
+  \end{equation} 
+  
+  However requirement \ref{mercer4} is equivalent to inequality \ref{mercer2}, which is true. This means that $K_1(\bx,\bz) K_2(\bx,\bz)$ is a valid kernel.
+  
 \item ~[10 points] Show that a polynomial over a kernel that is
   constructed using positive coefficients is a kernel. That is, if $P$
   is any polynomial with positive coefficients, show that $K$ below is
@@ -28,6 +56,23 @@
 Hint: You may need show  $ K(\bx,\bz) = \alpha K_1(\bx,\bz) +  \beta K_2(\bx,\bz)$ is a valid kernel and use the conclusion in the previous question.
 \end{enumerate} 
   
+We have already shown in the previous answer that the product of two kernels is also a kernel. That is, if $K_1(\bx, \bz)$ is a valid kernel, then $K_1(\bx, \bz)K_1(\bx, \bz)$. From this it follows that $\left(K_1(\bx, \bz)\right)^3$ is a kernel since $\left(K_1(\bx, \bz)\right)^3 = \left( K_1(\bx, \bz) K_1(\bx, \bz)\right) K_1(\bx, \bz)= K_1'(\bx, \bz)K_1(\bx, \bz)$, where 
+$K_1'(\bx, \bz) =  K_1(\bx, \bz) K_1(\bx, \bz)$. We already know that $K_1'(\bx, \bz)K_1(\bx, \bz)$ is a valid kernel since its the product of two kernels. This means that 
+$\left(K_1(\bx, \bz)\right)^{n+1}$ is a kernel if $\left(K_1(\bx, \bz)\right)^n$ is a kernel. Using induction we can therefore show that $\left(K_1(\bx, \bz)\right)^n$ is a kernel for any whole number $n$.\\
+
+A polynomial over a kernel that is constructed using positive coefficients can be shown as a combination of many terms of the form $\alpha K_1(\bx, \bz) + \beta K_2(\bx, \bz) + \ldots$. Using Mercer's condition, we need to show that 
+
+    \begin{equation}
+ \sum_i \sum_j c_i k_j \left(\alpha K_1 \left ( \bx_i, \bz_j \right ) +\beta K_2 \left ( \bx_i, \bz_j \right ) + \ldots \right) \geq 0
+   \label{mercer5}
+  \end{equation} 
+
+    \begin{equation}
+\alpha \sum_i \sum_j c_i k_j K_1 \left ( \bx_i, \bz_j \right ) +\beta \sum_i \sum_j c_i k_j K_2 \left ( \bx_i, \bz_j \right ) + \dots  \geq 0
+   \label{mercer6}
+  \end{equation} 
+
+Since $K_1(\bx, \bz)$ and $K_2(\bx, \bz)$ and other terms are kernels, and coefficients $\alpha$, $\beta$ and others are positive, relation \ref{mercer6} is true. Which means that a polynomial over a kernel that is constructed using positive coefficients is a kernel.
 
 \item~[10 points] Given two examples $\bx \in \Re^2$ and $\bz \in
   \Re^2$, let

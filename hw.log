@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 NOV 2016 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 NOV 2016 21:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1056,65 +1056,56 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count184
  (./margins.tex
-
-LaTeX Warning: Reference `XorSvm' on page 1 undefined on input line 29.
-
-
-LaTeX Warning: Reference `XorOriginal' on page 1 undefined on input line 31.
-
-
-LaTeX Warning: Reference `XorSvm' on page 1 undefined on input line 31.
-
-
-LaTeX Warning: Reference `XorOriginal' on page 1 undefined on input line 31.
-
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
+[2] [3] [4]) (./kernels.tex [5]
+Overfull \hbox (30.76828pt too wide) in paragraph at lines 59--62
+\OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 ; \OT1/
+cmr/bx/n/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/
+n/12 x\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z\OT1/cmr/m/n/12 )$, where $\OML/cmm/
+m/it/12 K[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/
+12 z\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x
+\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 K[]\OT1/
+cmr/m/n/12 (\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z\OT1/cmr/m/n
+/12 )$. We al-ready know that $\OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OT1/cmr/bx
+/n/12 x\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 K
+[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z\OT1/
+cmr/m/n/12 )$
+ []
 
-LaTeX Warning: Reference `SetD1' on page 3 undefined on input line 126.
 
-[3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
 
-LaTeX Warning: Reference `SetD2' on page 4 undefined on input line 151.
+ []
 
-
-LaTeX Warning: Reference `SetD3' on page 4 undefined on input line 175.
-
-[4]) (./kernels.tex [5]) (./experiment.tex [6] [7]) [8] (./hw.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[6]) (./experiment.tex [7] [8]) [9] (./hw.aux) ) 
 Here is how much of TeX's memory you used:
- 32134 strings out of 493089
- 785905 string characters out of 6134842
- 860765 words of memory out of 5000000
- 35151 multiletter control sequences out of 15000+600000
+ 32140 strings out of 493089
+ 785959 string characters out of 6134842
+ 860877 words of memory out of 5000000
+ 35157 multiletter control sequences out of 15000+600000
  17313 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,77p,10369b,921s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on hw.pdf (8 pages, 157215 bytes).
+ 62i,12n,77p,10369b,918s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt12.pfb>
+Output written on hw.pdf (9 pages, 161360 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
