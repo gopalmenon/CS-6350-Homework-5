@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 NOV 2016 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 NOV 2016 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1101,12 +1101,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--62
 
  []
 
-[6]
-Overfull \hbox (62.86148pt too wide) detected at line 123
-[] []
- []
-
-[7]) (./experiment.tex [8]
+[6] [7]) (./experiment.tex [8]
 Underfull \vbox (badness 10000) detected at line 105
  []
 
@@ -1114,7 +1109,7 @@ Underfull \vbox (badness 10000) detected at line 105
 Here is how much of TeX's memory you used:
  32261 strings out of 493089
  787619 string characters out of 6134842
- 893630 words of memory out of 5000000
+ 887630 words of memory out of 5000000
  35272 multiletter control sequences out of 15000+600000
  17313 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1133,7 +1128,7 @@ public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt12.pfb>
-Output written on hw.pdf (15 pages, 181954 bytes).
+Output written on hw.pdf (15 pages, 181816 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream

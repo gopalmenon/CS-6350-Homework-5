@@ -367,7 +367,8 @@ The accuracy ($\frac{TP+TN}{Number of Samples}$) obtained was
      \caption{Madelon data set average accuracy for hyper parameters}
   \end{longtable}  
 
-Due to the extensive cross validation used, the run took around 7 to 8 minutes. The above table was obtained for the SVM run log, that is written into a text file.
+Due to the extensive cross validation used, the run took around 7 to 8 minutes. The above table was obtained for the SVM run log, that is written into a text file. The above table was obtained by copying data written into file NonEnsembleMadelonLogFile.txt by the SVM program.
+
     \begin{table}[H]
     \centering
     \begin{tabular}{| c | c |}
@@ -381,6 +382,8 @@ Due to the extensive cross validation used, the run took around 7 to 8 minutes. 
     \end{tabular}
     \caption{Madelon data set accuracy on test and training sets}
   \end{table}   
+
+All metrics are written into log file SvmRunLogFile.txt and have been copied into the table above.
 
 \item ~[6 points] Precision , recall and $ F_1$ score are another
   metrics besides accuracy, which are useful if the dataset is
@@ -422,6 +425,8 @@ Due to the extensive cross validation used, the run took around 7 to 8 minutes. 
     \caption{Precision, Recall and $F_1$ score for classifiers run on Handwriting and Madelon data sets}
   \end{table}   
 \end{enumerate}
+
+All metrics are written into log file SvmRunLogFile.txt and have been copied into the tables above.
 
 \subsection{Ensemble of decision trees}
 
@@ -533,6 +538,8 @@ You will finally train an SVM on this new dataset $D$.
     \caption{Accuracy, Precision, Recall and $F_1$ score for classifier run on Madelon test data set}
   \end{table}   
     
+All metrics are written into log file SvmRunLogFile.txt and have been copied into the tables above.
+
   \end{enumerate}
 \end{enumerate}
 
